@@ -35,4 +35,17 @@ public class YoudaoTranslate {
 		Map<String, Object> map = json;
 		return map;
 	}
+	
+	
+	@ResponseBody
+	@RequestMapping(value = "/voice")
+	public Map<String, Object> voice(String content) throws ParseException,
+			IOException {
+
+		JSONObject json = httpUtil
+				.doPostStr("aaa",content);
+		System.out.println(json);
+		Map<String, Object> map = json;
+		return map;
+	}
 }
